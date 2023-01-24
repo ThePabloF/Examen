@@ -1,0 +1,55 @@
+<head>
+    <H1>Formulario</H1>
+    </head>
+    
+    <body>
+        <header id="main-header">
+            
+            <a id="logo-header" href="#">
+                <span class="site-name">FEIJO PABLO</span>
+                <span class="site-desc">Pablo Feijo / cabecera / Formulario</span>
+            </a>
+    
+
+    
+        </header>
+    
+
+        <form []="miformulario">
+
+        
+            <input type="text" formControlName="nombre" class="form-control" placeholder = "Ingrese Nombres">
+            <span *ngIf="validar('nombre')">
+                No puede ir vacio
+            </span> 
+            <input type="text" formControlName="apellido" class="form-control"  placeholder = "Ingrese Apellidos">
+            <span *ngIf="validar('apellido')">
+                No puede ir vacio
+            </span> 
+            <input type="text" formControlName="telefono" class="form-control" placeholder = "Ingresa tu telefono">
+            <span *ngIf="validar('telefono')">
+                No puede ir vacio
+            </span> 
+            <input type="text" formControlName="cedula" class="form-control" placeholder = "Ingresa tu cedula">
+            <span *ngIf="validar('cedula')">
+                No puede ir vacio
+            </span> 
+            <input type="text" formControlName="correo" class="form-control" placeholder = "Ingresa tu correo">
+            <span *ngIf="validar('correo')">
+                No puede ir vacio
+            </span> 
+            <div>
+                <pre>{{miformulario.value|json}}</pre>
+            </div>
+            
+            <button type="button" (click)="guardar()" >GUARDAR</button>
+           
+    
+        
+    
+            
+        </form>
+        
+    
+    
+    </body>
